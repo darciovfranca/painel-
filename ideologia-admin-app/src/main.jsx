@@ -3,8 +3,7 @@ import {createRoot} from 'react-dom/client';
 import {createClient} from '@supabase/supabase-js';
 import './style.css';
 
-const supabase = import.meta.env.VITE_SUPABASE_URL && import.meta.env.VITE_SUPABASE_ANON_KEY
-  ? createClient(import.meta.env.VITE_SUPABASE_URL, import.meta.env.VITE_SUPABASE_ANON_KEY) : null;
+const supabase = createClient('https://blehflymqklpgesdhuhn.supabase.co', 'sb_publishable_xMStEouHvg3VwuP3UlGcKA_Gxhr1jnq');
 const blankSettings={site_title:'IDEOLOGIA',tagline:'MEMORIAL DO RAP',hero_title:'A história continua na voz do povo.',hero_text:'Memória, música e resistência.',background_color:'#101014',surface_color:'#1b1a20',accent_color:'#e5a83b',text_color:'#f4f1ed',background_image_url:'',logo_url:'',hero_image_url:''};
 const norm=s=>String(s||'').trim().replace(/\s+/g,' ').toLocaleLowerCase('pt-BR');
 
